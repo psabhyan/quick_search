@@ -30,3 +30,8 @@ test/dummy/db/*.sqlite3-journal
 test/dummy/log/*.log
 test/dummy/tmp/
 test/dummy/.sass-cache
+
+#Ignore all the roles which are downloaded from galaxy
+ansible/roles/*
+-ansible/roles/quicksearch-post-install
+-ansible/roles/quicksearch
