@@ -6,12 +6,17 @@
   roles:
     - role: basic-setup
       sudo: yes
-    - role: rvm-setup
-      sudo: yes
-      rubies:
+#    - role: rvm-setup
+#      sudo: yes
+#      rubies:
+#        - ruby-2.1.7
+#      users:
+#        - vagrant
+    - role: rvm_io.ruby
+      rvm1_rubies:
         - ruby-2.1.7
-      users:
-        - vagrant
+      rvm1_user: "vagrant"
+      become: yes
     - role: quicksearch
     - role: passenger-apache
       sudo: yes

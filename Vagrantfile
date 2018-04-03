@@ -3,7 +3,7 @@
 
 Vagrant.configure(2) do |config|
 
-  config.vm.box = "boxcutter/centos72"
+  config.vm.box = "bento/centos-7.2"
   config.vm.hostname = "quicksearch"
 
   config.ssh.forward_agent = true
@@ -12,8 +12,12 @@ Vagrant.configure(2) do |config|
   # using a specific IP.
   config.vm.network "private_network", ip: "192.168.50.21"
 
+  # install git before running ansible provisioner
+  config.vm.provision "shell", inline: "yum -y install git"
+
   # main provisioner
   config.vm.provision "ansible_local" do |ansible|
+    ansible.galaxy_role_file = 'ansible/requirements.yml'
     ansible.playbook = 'ansible/development-playbook.yml'
     ansible.inventory_path = 'ansible/inventories/development.ini'
     ansible.limit = 'all'

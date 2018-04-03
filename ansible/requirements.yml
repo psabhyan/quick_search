@@ -1,0 +1,45 @@
+#requirements.yml
+
+# from galaxy
+- src: rvm_io.ruby
+
+
+- src: https://github.com/NCSU-Libraries-Ansible-Roles/basic-setup.git
+  version: "v1.1.0"
+  name: basic-setup
+
+- src: https://github.com/NCSU-Libraries-Ansible-Roles/dev-bundle.git
+  version: "v1.1.0"
+  name: dev-bundle
+
+- src: https://github.com/NCSU-Libraries-Ansible-Roles/dev-db-migrate.git
+  version: "v1.1.0"
+  name: dev-db-migrate
+
+- src: https://github.com/NCSU-Libraries-Ansible-Roles/dev-link-opt-rails.git
+  version: "v1.1.0"
+  name: dev-link-opt-rails
+
+- src: https://github.com/NCSU-Libraries-Ansible-Roles/dev-open-firewall.git
+  version: "v1.1.0"
+  name: dev-open-firewall
+
+- src: https://github.com/NCSU-Libraries-Ansible-Roles/github-com-known-host.git
+  version: "v1.1.0"
+  name: github-com-known-host
+
+- src: https://github.com/NCSU-Libraries-Ansible-Roles/java.git
+  version: "v1.1.0"
+  name: java
+
+- src: https://github.com/NCSU-Libraries-Ansible-Roles/mariadb.git
+  version: "v1.1.0"
+  name: mariadb
+
+- src: https://github.com/NCSU-Libraries-Ansible-Roles/passenger-apache.git
+  version: "v1.1.1"
+  name: passenger-apache
+
+- src: https://github.com/NCSU-Libraries-Ansible-Roles/solr.git
+  version: "v1.1.0"
+  name: solr
